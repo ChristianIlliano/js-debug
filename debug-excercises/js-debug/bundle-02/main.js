@@ -49,11 +49,11 @@ console.log(result);
 // }
 // printColorsNumber();
 
- function printColorsNumber() {
-     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
-     console.log(`Nella mia palette ci sono ${colors.length} colori!`);
- }
- printColorsNumber();
+function printColorsNumber() {
+    const colors = ['blue', 'red', 'yellow', 'green', 'black'];
+    console.log(`Nella mia palette ci sono ${colors.length} colori!`);
+}
+printColorsNumber();
 
 //   1- Stampa il numero di colori
 //   2- Errore di scrittura di length
@@ -69,13 +69,13 @@ console.log(result);
 // }
 // addNumbers();
 
- function addNumbers() {
-     const userNumber = parseInt(prompt('Inserisci un numero'));
-     const total = userNumber + 12;
+function addNumbers() {
+    const userNumber = parseInt(prompt('Inserisci un numero'));
+    const total = userNumber + 12;
 
-     console.log(`Il risultato finale è ${total}`);
- }
- addNumbers();
+    console.log(`Il risultato finale è ${total}`);
+}
+addNumbers();
 
 // 1- Esegue la somma +12 al numeri richiesto all'utente
 // 2- Non è stato convertito in numero la stringa che esce dal prompt
@@ -100,27 +100,21 @@ console.log(result);
 // }
 // checkAccess();
 
- function checkAccess() {
-     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
-     const userEmail = prompt('Inserisci il tuo indirizzo email');
+function checkAccess() {
+    const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+    const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-     let grantAccess = 'false';
+    if (addresses.includes(userEmail)) {
+        console.log('Accesso Consentito');
+    } else {
+        console.log('Accesso Negato');
+    }
+}
+checkAccess();
 
-     if (addresses.includes(userEmail)) {
-         grantAccess = 'true';
-     }
-
-     if (grantAccess === true) {
-         console.log('Accesso consentito!');
-     } else {
-         console.log('Accesso negato!');
-     }
- }
- checkAccess();
-
-// 1- Che cosa fa questo codice?
-// 2- Sono presenti errori di sintassi?
-// 3- Sono presenti errori logici?
+// 1- controlla se le mail inserita dall'utente è contemplata in un array
+// 2- if al posto di else if e il === al posto dell'=
+// 3- true or false non serve 
 
 // // ESERCIZIO 5 (suggerimento: c'è un solo errore)
 // function checkAccessImproved() {
@@ -149,3 +143,36 @@ console.log(result);
 //         }
 //     }
 //     checkAccessImproved();
+
+// // ESERCIZIO 5 (suggerimento: c'è un solo errore)
+function checkAccessImproved() {
+    const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+
+    const userEmail = prompt('Inserisci il tuo indirizzo email');
+
+    let grantAccess = 'false';
+
+    for (let i = 0; i < addresses.length; i++) {
+        const email = addresses[i];
+
+        if (userEmail.length > 4) {
+
+            if (email === userEmail) {
+                grantAccess = 'true';
+
+            }
+
+        }
+
+        if (grantAccess) {
+            console.log('Accesso consentito!');
+        } else {
+            console.log('Accesso negato!');
+        }
+    }
+}
+    checkAccessImproved();
+
+    // 1- accesso negato o consentito in base alla tua mail se è presente o meno nell'array
+    // 2- non era chiusa la funzione e l'if se è maggiore di 4 non 5
+    // 3- Sono presenti errori logici?
