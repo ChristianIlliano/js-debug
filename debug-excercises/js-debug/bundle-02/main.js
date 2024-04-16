@@ -11,109 +11,141 @@
 
 
 // ESERCIZIO 1
+// function checkAge() {
+//     const myAge = 32;
+//     const message = '';
+
+//     if (myAge < 18) {
+//         message = `Sei troppo giovane! Hai ${myAge} anni!`;
+//     } else {
+//         message = 'Hai più di 18 anni!';
+//     }
+// }
+// checkAge();
+
 function checkAge() {
-    const myAge = 32;
-    const message = '';
+    let myAge = 32;
+    let message = '';
 
     if (myAge < 18) {
         message = `Sei troppo giovane! Hai ${myAge} anni!`;
     } else {
         message = 'Hai più di 18 anni!';
     }
+    return message
 }
-checkAge();
+const result = checkAge();
+console.log(result);
 
-// ESERCIZIO 2
-function printColorsNumber() {
-    const colors = ['blue', 'red', 'yellow', 'green', 'black'];
-    console.log(`Nella mia palette ci sono ${colors.lenght} colori!`);
-}
-printColorsNumber();
+// 1- controlla l'età dell'utente, se è maggiorenne o meno
+// 2- manca il return delle condizione
+// 3- Sono presenti errori logici?
 
 
-// ESERCIZIO 3
-function addNumbers() {
-    const userNumber = prompt('Inserisci un numero');
-    const total = userNumber + 12;
+// // ESERCIZIO 2
+// function printColorsNumber() {
+//     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
+//     console.log(`Nella mia palette ci sono ${colors.lenght} colori!`);
+// }
+// printColorsNumber();
 
-    console.log(`Il risultato finale è ${total}`);
-}
-addNumbers();
+ function printColorsNumber() {
+     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
+     console.log(`Nella mia palette ci sono ${colors.length} colori!`);
+ }
+ printColorsNumber();
 
-
-// ESERCIZIO 4
-function checkAccess() {
-    const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
-    const userEmail = prompt('Inserisci il tuo indirizzo email');
-
-    let grantAccess = 'false';
-
-    if (addresses.includes(userEmail)) {
-        grantAccess = 'true';
-    }
-
-    if (grantAccess === true) {
-        console.log('Accesso consentito!');
-    } else {
-        console.log('Accesso negato!');
-    }
-}
-checkAccess();
+//   1- Stampa il numero di colori
+//   2- Errore di scrittura di length
+//   3- non ci sono errori logici
 
 
-// ESERCIZIO 5 (suggerimento: c'è un solo errore)
-function checkAccessImproved() {
-    const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+// // ESERCIZIO 3
+// function addNumbers() {
+//     const userNumber = prompt('Inserisci un numero');
+//     const total = userNumber + 12;
 
-    const userEmail = prompt('Inserisci il tuo indirizzo email');
+//     console.log(`Il risultato finale è ${total}`);
+// }
+// addNumbers();
 
-    let grantAccess = 'false';
+ function addNumbers() {
+     const userNumber = parseInt(prompt('Inserisci un numero'));
+     const total = userNumber + 12;
 
-    for (let i = 0; i < addresses.length; i++) {
-        const email = addresses[i];
+     console.log(`Il risultato finale è ${total}`);
+ }
+ addNumbers();
 
-        if (userEmail.length > 5) {
+// 1- Esegue la somma +12 al numeri richiesto all'utente
+// 2- Non è stato convertito in numero la stringa che esce dal prompt
+// 3- Sono presenti errori logici?
 
-            if (email === userEmail) {
-                grantAccess = 'true';
+// // ESERCIZIO 4
+// function checkAccess() {
+//     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+//     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-            }
+//     let grantAccess = 'false';
 
-        }
+//     if (addresses.includes(userEmail)) {
+//         grantAccess = 'true';
+//     }
 
-        if (grantAccess) {
-            console.log('Accesso consentito!');
-        } else {
-            console.log('Accesso negato!');
-        }
-    }
-    checkAccessImproved();
+//     if (grantAccess === true) {
+//         console.log('Accesso consentito!');
+//     } else {
+//         console.log('Accesso negato!');
+//     }
+// }
+// checkAccess();
 
+ function checkAccess() {
+     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
+     let grantAccess = 'false';
 
+     if (addresses.includes(userEmail)) {
+         grantAccess = 'true';
+     }
 
+     if (grantAccess === true) {
+         console.log('Accesso consentito!');
+     } else {
+         console.log('Accesso negato!');
+     }
+ }
+ checkAccess();
 
+// 1- Che cosa fa questo codice?
+// 2- Sono presenti errori di sintassi?
+// 3- Sono presenti errori logici?
 
+// // ESERCIZIO 5 (suggerimento: c'è un solo errore)
+// function checkAccessImproved() {
+//     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
 
+//     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
+//     let grantAccess = 'false';
 
+//     for (let i = 0; i < addresses.length; i++) {
+//         const email = addresses[i];
 
+//         if (userEmail.length > 5) {
 
+//             if (email === userEmail) {
+//                 grantAccess = 'true';
 
+//             }
 
+//         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//         if (grantAccess) {
+//             console.log('Accesso consentito!');
+//         } else {
+//             console.log('Accesso negato!');
+//         }
+//     }
+//     checkAccessImproved();
