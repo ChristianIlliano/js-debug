@@ -56,7 +56,7 @@ function loopToFive() {
     }
 }
 
-// 1- Dovrebbe restituire tutti i numeri con indice da 0 a 5
+// 1- Dovrebbe restituire tutti i numeri con indice da 0 a 4
 // 2- è sbagliata la sintassi per le virgole dovrebbero essere punto e virgola
 // 3- no
 
@@ -77,19 +77,16 @@ function displayEvenNumbers() {
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
     let evenNumbers = [];
     for (let i = 0; i < numbers.length; i++) {
-        // console.log("ITERAZIONE:"+i);
-        // console.log("NUMERO:"+ numbers[i]);
+
         if (numbers[i] % 2 === 0) {
-            // console.log("PARI: " + numbers[i]);
             evenNumbers.push(numbers[i]);
         }
-        // return evenNumbers;
     }
     return evenNumbers;
 }
-const result = displayEvenNumbers(); // dovrebbe restituire [2,4,6,8]
-console.log(result);
+const arrEvenNumbers = displayEvenNumbers(); // dovrebbe restituire [2,4,6,8]
+console.log(arrEvenNumbers);
 
 // 1- 
-// 2- punto e virgola dopo i++, = al posto di ===, i indicato con la parentesi tonda e non quadra, bisogna indicare gli indici di number, la dichiarazione della funizone non ha una variabile, mancano i parametri nella funzione
+// 2- punto e virgola dopo i++, = al posto di ===, i indicato con la parentesi tonda e non quadra, bisogna indicare gli indici di number, la dichiarazione della funizone non ha una variabile, va spostato il return fuori al ciclo for ma non dalla funzione
 // 3- 
