@@ -56,22 +56,40 @@ const cars = [
         manufacturer: 'Seat',
         model: 'Ibiza',
         type: 'metano'
-    }
+    },
     {
         manufacturer: 'Audi',
         model: 'R8',
         type: 'Benzina'
-    },
+    }
 ];
 
-const gasolineCars = cars.filter( (auto) >= auto.type === 'benzina');
+// const gasolineCars = cars.filter( (auto) >= auto.type === 'benzina');
 
-const dieselCars = cars.filter( (auto) => {
-    auto.type === 'diesel';
-});
+// const dieselCars = cars.filter( (auto) => {
+//     auto.type === 'diesel';
+// });
+
+// const otherCars = cars.filter( (auto) => {
+//     return auto.type !== 'benzina' || auto.type !== 'diesel';
+// });
+
+// console.log('Auto a benzina');
+// console.log('*******************************');
+// console.log(gasolineCars);
+
+// console.log('Auto a diesel');
+// console.log('*******************************');
+// console.log(dieselCars);
+
+// console.log('Tutte le altre auto');
+// console.log(otherCars);
+
+const gasolineCars = cars.filter((auto) => auto.type === 'benzina');
+const dieselCars = cars.filter((auto) => auto.type.toLowerCase() === 'diesel');
 
 const otherCars = cars.filter( (auto) => {
-    return auto.type !== 'benzina' || auto.type !== 'diesel';
+    return auto.type !== 'benzina' && auto.type !== 'diesel';
 });
 
 console.log('Auto a benzina');
@@ -84,3 +102,10 @@ console.log(dieselCars);
 
 console.log('Tutte le altre auto');
 console.log(otherCars);
+
+
+
+
+// 1- Va a filtrare le auto in base al tipo
+// 2- virgola tra gli oggetti mancante, && al posto di ||, inversione di >= in =>, e aggiungere toLowerCase()
+// 3- Sono presenti errori logici?
